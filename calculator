@@ -1,0 +1,12 @@
+a= int(input("enter no.1 :"))
+b= int(input("enter no.2 :"))
+print("Sum=",a+b)
+print("Difference=",a-b)
+print("Product=",a*b)
+print("a^b=",a**b)
+print("Numerator=",a//b)
+print("Remainder=",a%b)
+print("Division=",a/b)
+
+
+

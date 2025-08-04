@@ -1,0 +1,329 @@
+i=input('''Welcome to Kaun Banega Crorepati. 
+      Want to become a crorepati?
+      a)Yes! b)No :(
+        ''').lower()
+print("      ")
+import sys
+
+if i== "b" or i == "no":
+    print("Exiting the program...")
+    sys.exit()
+elif i== "a" or i == "yes":
+    print('''
+      Lucky you!
+      By just answering 10 questions correctly, you can win 1 crore''')
+else:
+    print("Invalid input.")
+    sys.exit()
+
+s1=0
+s2=0
+s3=0
+choice=input('''
+      Note the following:
+             
+      Difficulty level increases with each question, so think carefully before answering.
+
+      You can quit at any time by typing 'quit'.
+
+      Now you can pick the topic that resonates with you the most:
+      1. AGI
+      2. ASI
+      3. Current & Emerging AI Technologies
+      ''')
+if choice not in ["1", "2", "3"]:
+    print("Invalid input.")
+    sys.exit()
+    
+if choice == "1":
+    print("You chose AGI. Let's begin!")
+    ques1=['''Q1. What does AGI stand for? 
+    A. Automated General Intelligence
+    B. Artificial General Intelligence
+    C. Augmented Global Intelligence
+    D. Advanced General Interface''',
+    '''Q2. Which test checks if a machine can mimic human intelligence?"
+     A. CAPTCHA
+     B. IQ Test
+     C. Turing Test
+     D. Loebner Test''',
+    '''Q3. Which company is known for AGI research?"
+     A. Tesla
+     B. DeepMind
+     C. Meta
+     D. Netflix''',
+'''Q4. AGI aims to perform tasks across:
+ A. One domain
+ B. Gaming only
+ C. All domains
+ D. Visual tasks only''',
+'''Q5. Which concept is a major risk of AGI?
+ A. Low cost
+ B. Boredom
+ C. Misalignment
+ D. Overheating''',
+'''Q6. OpenAI's stated mission is to:
+ A. Build robots
+ B. Sell AI tools
+ C. Promote friendly AGI
+ D. Replace humans''',
+'''Q7. Which test is a potential future benchmark for AGI?
+ A. Driving test
+ B. College exam
+ C. Hutter Prize
+ D. Coffee Test''',
+'''Q8. AGI differs from narrow AI because it is:
+ A. Slower
+ B. Human-like in general learning
+ C. Cheaper
+ D. Voice-based''',
+'''Q9. DeepMind’s AGI research is called:
+ A. NeuralNext
+ B. DeepGen
+ C. Gemini
+ D. Titan''',
+'''Q10. The biggest challenge in AGI safety is:
+ A. Cost
+ B. Data storage
+ C. Human alignment
+ D. GPU shortage)''']
+
+    ans1=["B", "C", "B", "C", "C", "C", "D", "B", "C", "C"]
+    q1=0
+    a1=0
+    i1=0
+    s1=0
+    while i1<10:
+        print("\n")
+        print(ques1[q1])
+        ans=input("\nYour answer: ").upper()
+        if ans == "QUIT":
+            print("\nExiting the game. Thank you for playing!")
+            sys.exit()
+        elif ans == ans1[a1]:
+            print("\nCorrect answer!")
+            a1 += 1
+            q1 += 1
+            i1 += 1
+            if i1<=3:
+                s1+=100000
+            elif 3<i1<=6:
+                 s1+=500000
+            elif 6<i1<=9:    
+                s1+=1000000
+            elif i1==10:
+                s1+=5200000
+
+            print(f"\nYou have won {s1} rupees!")
+
+        else:
+            print(f"\nWrong answer! The correct answer was {ans1[a1]}.")
+            q1 += 1
+            i1 += 1
+            a1 += 1
+
+    print(f"\nYou have won {s1} rupees in total.")
+
+if choice == "2":
+    print("You chose ASI. Let's begin!")
+    ques2=['''
+Q1. What does ASI stand for?
+   A. Artificial Simulation Intelligence
+   B. Automated System Interface
+   C. Artificial Superintelligence
+   D. Augmented Smart Interface''',
+
+'''Q2. ASI refers to machines that are:
+   A. Equal to human intelligence
+   B. Below human intelligence
+   C. Above human intelligence
+   D. Based on emotion only''',
+
+'''Q3. The idea that AI could rapidly surpass human abilities is called:
+   A. Slow growth
+   B. Singularity
+   C. Overfitting
+   D. Debugging''',
+
+'''Q4. Which risk is most discussed in ASI?
+   A. Lagging
+   B. Data privacy
+   C. Loss of human control
+   D. Internet speed''',
+
+'''Q5. Who popularized the intelligence explosion idea?
+   A. Bill Gates
+   B. Stephen Hawking
+   C. I.J. Good
+   D. Alan Turing''',
+
+'''Q6. ASI could outperform humans in:
+   A. Only games
+   B. Basic math
+   C. All intellectual tasks
+   D. Typing speed''',
+
+'''Q7. What’s a major control problem with ASI?
+   A. Memory loss
+   B. Code bugs
+   C. Goal misalignment
+   D. Language translation''',
+
+'''Q8. “Friendly AI” refers to:
+   A. Social media bots
+   B. AI with human emotions
+   C. ASI aligned with human values
+   D. Robots with cute voices''',
+
+'''Q9. Which term refers to a machine re-designing itself for improvement?
+   A. Recursive self-improvement
+   B. Batch training
+   C. Overclocking
+   D. Multi-agent training''',
+
+'''Q10. The ASI scenario where humans lose control permanently is called:
+    A. Cold reboot
+    B. AI pause
+    C. Existential risk
+    D. Power loop
+''']
+
+    ans2=["C", "C", "B", "C", "C", "C", "C", "C", "A", "C"]
+    q2=0
+    a2=0
+    i2=0
+    s2=0
+    while i2<10:
+        print("\n")
+        print(ques2[q2])
+        ans=input("\nYour answer: ").upper()
+        if ans == "QUIT":
+            print("\nExiting the game. Thank you for playing!")
+            sys.exit()
+        elif ans == ans2[a2]:
+            print("Correct answer!")
+            a2 += 1
+            q2 += 1
+            i2 += 1
+            if i2<=3:
+                s2+=100000
+            elif 3<i2<=6:
+                 s2+=500000
+            elif 6<i2<=9:    
+                s2+=1000000
+            elif i2==10:
+                s2+=5200000
+
+            print(f"\nYou have won {s2} rupees!")
+
+        else:
+            print(f"\nWrong answer! The correct answer was {ans2[a2]}.")
+            q2 += 1
+            i2 += 1
+            a2 += 1
+    print(f"\nYou have won {s2} rupees in total.")
+
+
+
+
+if choice == "3":
+    print("\nYou chose ASI. Let's begin!")
+    ques3=['''
+Q1. GPT-4o is an example of a:
+   A. Calculator
+   B. Large Language Model
+   C. Database
+   D. Antivirus''',
+
+'''Q2. Which of these generates images from text?
+   A. Suno
+   B. Canva
+   C. Sora
+   D. DALL·E''',
+
+'''Q3. What does an AI agent typically do?
+   A. Only store data
+   B. Solve tasks autonomously
+   C. Play games only
+   D. Act as a chatbot only''',
+
+'''Q4. RLHF stands for:
+   A. Robotic Learning Heuristic Framework
+   B. Reinforcement Learning from Human Feedback
+   C. Recursive Learning for Hardware Functions
+   D. Real-Life Human Factors''',
+
+'''Q5. Sora by OpenAI is used for:
+   A. Audio classification
+   B. 3D modeling
+   C. Text-to-video generation
+   D. Code debugging''',
+
+'''Q6. Suno specializes in generating:
+   A. Images
+   B. Emails
+   C. Music
+   D. Code''',
+
+'''Q7. Prompt engineering helps improve:
+   A. Internet speed
+   B. Model responses
+   C. Battery life
+   D. Server size''',
+
+'''Q8. Which tech helps AI understand images and video?
+   A. Prompt chaining
+   B. Vector databases
+   C. Computer vision
+   D. Voice modeling''',
+
+'''Q9. A multi-modal model can handle:
+   A. Only text
+   B. Only voice
+   C. Only code
+   D. Text, image, and audio together''',
+
+'''Q10. Which model combines text, vision, and audio in real-time?
+    A. GPT-3
+    B. Sora
+    C. GPT-4o
+    D. Midjourney
+''']
+
+    ans3=["B", "D", "B", "B", "C", "C", "B", "C", "D", "C"]
+    q3=0
+    a3=0
+    i3=0
+    s3=0
+    while i3<10:
+        print("\n")
+        print(ques3[q3])
+        ans=input("\nYour answer: ").upper()
+        if ans == "QUIT":
+            print("\nExiting the game. Thank you for playing!")
+            sys.exit()
+        elif ans == ans3[a3]:
+            print("\nCorrect answer!")
+            a3 += 1
+            q3 += 1
+            i3 += 1
+            if i3<=3:
+                s3+=100000
+            elif 3<i3<=6:
+                 s3+=500000
+            elif 6<i3<=9:    
+                s3+=1000000
+            elif i3==10:
+                s3+=5200000
+
+            print(f"\nYou have won {s3} rupees!")
+
+        else:
+            print(f"\nWrong answer! The correct answer was {ans3[a3]}.")
+            q3 += 1
+            i3 += 1
+            a3 += 1
+    print(f"\nYou have won {s3} rupees in total.")
+
+
+
